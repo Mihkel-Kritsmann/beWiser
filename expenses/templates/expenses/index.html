@@ -12,11 +12,11 @@
         {% if expense_list %}
         <ul>
         {% for expense in expense_list %}
-            <li><a href="{% url 'expense:index' question.id %}">{{ question.question_text }}</a></li>
+            <li><a href="{% url 'expense:index' expense.id %}">{{ expense.question_text }}</a></li>
         {% endfor %}
         </ul>
         {% else %}
-            <p>No polls are available.</p>
+            <p>No expenses</p>
         {% endif %}
     </body>
 </html>
