@@ -12,7 +12,7 @@
         {% if expense_list %}
         <ul>
         {% for expense in expense_list %}
-            <li><a href="{% url 'expense:index' expense.id %}">{{ expense.question_text }}</a></li>
+            <li><a href="{% url 'expenses:expenses' expense.id %}">{{ expense.title }}</a></li>
         {% endfor %}
         </ul>
         {% else %}

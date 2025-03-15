@@ -21,6 +21,6 @@ from expenses import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('expense/', include('expenses.urls')),
+    path('expenses/', include('expenses.urls')),
      path('', views.home, name='home'),
 ]
