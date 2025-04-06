@@ -1,8 +1,25 @@
 <h1>Expenses</h1>
 <ul>
-{% for expense in object_list %}
-    <li>{{ expense.date|date }} - {{ expense }}</li>
-{% empty %}
+{% for expense in expenses %}
+    <li>{{ expense }}</li>
+    {% empty %}
     <li>No Expenses yet.</li>
+{% endfor %}
+
+</ul>
+<h1>Income</h1>
+<ul> 
+{% for income in incomes %}
+    <li>{{ income }}</li>
+    {% empty %}
+    <li>No Inocome yet.</li>
+{% endfor %}
+</ul>
+<h1>Category</h1>
+<ul>
+{% for catagory in categorys %}
+    <li>{{ catagory }}</li>
+    {% empty %}
+    <li>No Catagory yet.</li>
 {% endfor %}
 </ul>

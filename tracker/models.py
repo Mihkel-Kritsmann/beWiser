@@ -10,18 +10,20 @@ class Category(models.Model):
 
 class Expense(models.Model):
     amount = models.DecimalField(max_digits=10, decimal_places=2)
-    date = datetime.datetime()
+    date = models.DateTimeField('date of transaction', auto_now_add=True)
     description = models.TextField(blank=True, null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    recipient = models.CharField(max_length=100)
 
     def __str__(self):
-        return f"{self.amount} - {self.category.name} - {self.date}"
+        return f"{self.amount} - {self.category.name}"    
 
 class Income(models.Model):
     amount = models.DecimalField(max_digits=10, decimal_places=2)
-    date = models.DateField()
+    date = models.DateTimeField('date of transaction', auto_now_add=True)
     description = models.TextField(blank=True, null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    source = models.CharField(max_length=100)
 
     def __str__(self):
-        return f"{self.amount} - {self.category.name} - {self.date}"    
+        return f"{self.amount} - {self.category.name}"    
