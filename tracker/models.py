@@ -20,7 +20,11 @@ class Expense(models.Model):
 
 class Income(models.Model):
     amount = models.DecimalField(max_digits=10, decimal_places=2)
+<<<<<<< HEAD
     #date = models.DateTimeField('date of transaction', auto_now_add=True)
+=======
+    date = models.DateTimeField('date of transaction', auto_now_add=True)
+>>>>>>> refs/remotes/origin/main
     description = models.TextField(blank=True, null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     source = models.CharField(max_length=100)
