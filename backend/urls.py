@@ -16,10 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+<<<<<<< HEAD:backend/urls.py
+=======
+#from expenses import views
+>>>>>>> 89998ca66e22e929210207938c3ce1d06223e22f:bewiser/urls.py
 from tracker import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< HEAD:backend/urls.py
+=======
+    #path('expenses/', include('expenses.urls')),
+>>>>>>> 89998ca66e22e929210207938c3ce1d06223e22f:bewiser/urls.py
     path('', include('tracker.urls')),
 ]
